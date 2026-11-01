@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Explorer les Évangiles</title><link rel="stylesheet" href="style.css?v=10"></head>
+<body>
+<header><a class="brand" href="./">Évangiles<span class="brand-label">EXPLORATEUR SÉMANTIQUE</span></a><nav aria-label="Navigation principale"><a href="./" aria-current="page">Explorer</a><a href="observations.html">Observations</a></nav></header>
+<main>
+<section class="intro"><h1>Explorer les <em>Évangiles</em></h1><p>Quatre récits, une histoire commune. Explorez leurs échos, rapprochez les versets et découvrez comment chaque Évangile la raconte.</p></section>
+<section class="workspace" aria-label="Explorateur de correspondances">
+<div class="controls">
+<fieldset class="book-controls book-a"><legend>Livre à gauche</legend>
+<label class="book-field">Livre<select id="bookA" aria-label="Livre à gauche" disabled></select></label>
+<label>Chapitre<select id="chapterA" aria-label="Chapitre à gauche" disabled><option value="">Tous</option></select></label>
+<label>Verset<select id="verseA" aria-label="Verset à gauche" disabled><option value="">Tous</option></select></label>
+</fieldset><span class="versus" aria-hidden="true">↔</span><fieldset class="book-controls book-b"><legend>Livre à droite</legend>
+<label class="book-field">Livre<select id="bookB" aria-label="Livre à droite" disabled></select></label>
+<label>Chapitre<select id="chapterB" aria-label="Chapitre à droite" disabled><option value="">Tous</option></select></label>
+<label>Verset<select id="verseB" aria-label="Verset à droite" disabled><option value="">Tous</option></select></label>
+</fieldset>
+<div class="threshold"><label for="threshold">Similarité minimale <output id="thresholdValue">0,90</output></label><p id="thresholdDescription">Diminuez le seuil pour voir plus de correspondances, augmentez-le pour en voir moins.</p><input aria-describedby="thresholdDescription thresholdHint" id="threshold" type="range" min="0.80" max="1" step="0.005" value="0.9" disabled><div class="range-label"><span>0,80</span><span>1,00</span></div><p id="thresholdHint" role="status" aria-live="polite"></p></div>
+<p id="selectionNotice" role="status" aria-live="polite"></p>
+</div>
+<div class="plot-toolbar"><div class="tabs" role="group" aria-label="Type de graphique"><button id="arcsTab" class="active" aria-pressed="true">Arcs</button><button id="scatterTab" aria-pressed="false">Nuage de points</button></div><div class="plot-options"><label>Liens dessinés <select id="limit"><option>100</option><option selected>300</option><option>1000</option><option>3000</option></select></label><button id="resetZoom" class="text-button" disabled>↺ Réinitialiser</button></div></div>
+<div class="explorer"><div class="visual"><div class="plot-heading"><strong id="plotTitle">Chargement du corpus…</strong><span id="matchCount"></span></div><div class="canvas-wrap"><canvas id="plot" aria-label="Graphique des correspondances ; les mêmes paires sont accessibles dans la liste"></canvas><div id="tooltip" hidden></div><div id="loading" role="status">Préparation de l’exploration…</div></div><div class="plot-caption"><span id="plotHelp">Hauteur = score · couleurs distinctives · cliquer sur un arc pour lire</span><span><i class="dot"></i> Une paire de versets</span></div></div>
+<aside><div class="aside-heading"><span class="eyebrow">LIRE EN PARALLÈLE</span><span id="selectedScore" class="score"></span></div><div id="reading" aria-live="polite"><p class="empty">Sélectionnez une correspondance dans le graphique ou dans la liste.</p></div><div class="list-heading"><h2>Correspondances</h2><span id="pageInfo"></span></div><div id="pairList" class="pair-list"></div><div class="pagination"><button id="prevPage">← Précédentes</button><button id="nextPage">Suivantes →</button></div></aside></div>
+</section>
+<footer><div><strong>À propos de cette exploration</strong><p>3 779 versets · Louis Segond 1910 · Chaque verset est encodé avec <strong><code>mistral-embed</code></strong>, avec un traitement en batch. Les similarités cosinus sont précalculées : elles indiquent une proximité de sens, sans garantir un même événement.</p></div></footer>
+<p id="error" role="alert" hidden></p>
+</main><script type="module" src="app.js?v=9"></script>
+</body></html>

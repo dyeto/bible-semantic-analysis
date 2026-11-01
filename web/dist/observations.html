@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Les Évangiles vus à travers leurs ressemblances</title>
+    <meta name="description"
+        content="Une exploration visuelle des correspondances entre les versets des quatre Évangiles, avec des embeddings et des exemples de lecture.">
+    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="article.css?v=2">
+</head>
+
+<body>
+    <header><a class="brand" href="./">Évangiles<span class="brand-label">EXPLORATEUR SÉMANTIQUE</span></a>
+        <nav aria-label="Navigation principale"><a href="./">Explorer</a><a href="observations.html"
+                aria-current="page">Observations</a></nav>
+    </header>
+    <main class="article-page">
+        <article>
+            <div class="article-intro">
+                <p class="article-kicker">CARNET D’EXPLORATION · 6 MIN DE LECTURE</p>
+                <h1>Les Évangiles vus à travers leurs ressemblances</h1>
+                <p class="article-lead">Que voit-on lorsqu’on compare les versets des quatre Évangiles
+                    avec des embeddings ?</p>
+            </div>
+            <div class="article-method"><strong>Le point de départ (détails techniques)</strong>
+                <p>3 779 versets de la traduction Louis Segond 1910, encodés avec <code>mistral-embed</code> par un
+                    traitement en batch. Chaque verset est représenté par un vecteur de 1 024 dimensions. Les
+                    similarités cosinus entre ces vecteurs sont ensuite précalculées. Aucun modèle n’a été entraîné pour
+                    cette exploration.</p>
+            </div>
+            <section>
+                <h2>Matthieu et Marc : des correspondances qui suivent le récit</h2>
+                <p>Un premier graphique fait apparaître une structure nette. Les 500 paires de versets les plus
+                    similaires entre Matthieu et Marc forment plusieurs alignements, séparés par des ruptures et
+                    accompagnés de points isolés.</p>
+                <figure><a href="img/matthew_mark_similarity.png" target="_blank" rel="noopener"
+                        aria-label="Agrandir le graphique Matthieu et Marc"><img src="img/matthew_mark_similarity.png"
+                            alt="Les 500 paires les plus similaires entre Matthieu et Marc forment plusieurs segments diagonaux."
+                            loading="lazy"></a>
+                    <figcaption>Marc se lit de gauche à droite, Matthieu de haut en bas. Chaque point relie deux
+                        versets. Cliquer sur l’image pour l’agrandir.</figcaption>
+                </figure>
+                <p>Ces alignements suggèrent une <strong>structure narrative et textuelle commune</strong> : plusieurs
+                    passages racontent les mêmes épisodes, souvent dans le même ordre et avec des formulations très
+                    proches. Concrètement, quand on avance dans Marc, les versets correspondants avancent aussi dans
+                    Matthieu : les points dessinent alors une diagonale. Ce sont donc des suites de passages qui se
+                    répondent, et pas seulement des phrases isolées qui se ressemblent. Les axes suivent l’ordre du
+                    texte, pas une chronologie datée des événements.</p>
+                <p>Les décalages invitent aussi à la lecture. Ils peuvent signaler un passage placé ailleurs, une
+                    formulation récurrente ou une proximité de thème. Le graphique seul ne permet pas de choisir entre
+                    ces explications.</p>
+            </section>
+            <section>
+                <h2>Derrière les points, des textes parfois identiques</h2>
+                <p>Revenir aux textes permet de comprendre ce que mesure le score. Dans les premiers résultats, Matthieu
+                    3:4 et Marc 1:6 décrivent Jean avec exactement les mêmes mots dans cette traduction : son vêtement
+                    de poils de chameau, sa ceinture de cuir et sa nourriture.</p>
+                <figure><a href="img/matthew_mark_top_texts.png" target="_blank" rel="noopener"
+                        aria-label="Agrandir les exemples de versets"><img src="img/matthew_mark_top_texts.png"
+                            alt="Tableau de dix paires de versets de Matthieu et Marc dont les formulations sont identiques ou très proches, avec des scores proches de 1."
+                            loading="lazy"></a>
+                    <figcaption>Quelques correspondances parmi les mieux classées. Les références diffèrent, mais les
+                        formulations peuvent être identiques.</figcaption>
+                </figure>
+                <p>Un score proche de 1 est ici facile à interpréter. Pour d’autres paires, la ressemblance peut être
+                    moins littérale : un même lieu, une même question ou une scène voisine. Le score sert à repérer des
+                    candidats ; la lecture permet de comprendre leur lien.</p>
+            </section>
+            <section>
+                <h2>Jean dessine un autre profil</h2>
+                <p>Matthieu, Marc et Luc sont appelés les <strong>Évangiles synoptiques</strong>. Le mot « synoptique »
+                    renvoie à l’idée de « voir ensemble » : ces trois récits peuvent être lus côte à côte parce qu’ils
+                    partagent de nombreux épisodes, souvent présentés dans un ordre comparable et avec des formulations
+                    proches. Les alignements rendent cette proximité visible, particulièrement entre Matthieu et Marc.
+                    Avec Luc, les suites sont plus fragmentées : une trame commune n’implique pas une organisation
+                    identique de tous les passages.</p>
+                <figure><a href="img/four_gospels_similarity_diag.png" target="_blank" rel="noopener"
+                        aria-label="Agrandir la comparaison des quatre Évangiles"><img
+                            src="img/four_gospels_similarity_diag.png"
+                            alt="Matrice triangulaire des quatre Évangiles : alignements marqués entre Matthieu et Marc, plus fragmentés avec Luc, et correspondances plus dispersées avec Jean."
+                            loading="lazy"></a>
+                    <figcaption>Les 300 meilleures paires de chaque comparaison. Les cases où un livre est comparé à
+                        lui-même montrent surtout des versets associés à eux-mêmes.</figcaption>
+                </figure>
+                <p>La dernière ligne de la matrice contraste avec ces alignements : les correspondances entre
+                    <strong>Jean et les trois autres Évangiles</strong> forment un nuage plus dispersé. Les passages
+                    rapprochés ne se succèdent pas aussi régulièrement dans le même ordre. Cela suggère une organisation
+                    différente du récit : Jean ne reprend pas simplement la même succession de scènes. On retrouve des
+                    points de rencontre, mais ils dessinent moins souvent une progression parallèle sur l’ensemble du
+                    livre.</p>
+                <p>Les diagonales des comparaisons d’un livre avec lui-même ont un autre sens : un verset associé à
+                    lui-même occupe la même position sur les deux axes, avec un score égal ou très proche de 1. C’est un
+                    résultat attendu du calcul, pas une découverte sur la structure du récit.</p>
+                <p>Les alignements entre livres rendent donc visible une base narrative commune aux synoptiques, tandis
+                    que la dispersion avec Jean souligne un profil différent. Ils ne permettent toutefois pas de
+                    déterminer qui s’est inspiré de qui, ni d’affirmer que Jean est totalement indépendant des autres
+                    textes.</p>
+                <p><strong>Un détail essentiel :</strong> chaque case contient les 300 meilleures paires. On compare
+                    donc leur répartition, pas le nombre total de ressemblances. Une zone vide signifie qu’aucune paire
+                    de cette zone ne figure dans cette sélection, pas que les passages n’ont aucun lien.</p>
+            </section>
+            <section>
+                <h2>Vers la fin, des rapprochements autour de la Passion</h2>
+                <p>Dans la dernière ligne de la matrice, un regroupement attire l’attention vers la fin des livres.
+                    L’examen de certaines paires entre Marc et Jean permet de lui donner un contenu concret.</p>
+                <div class="article-examples">
+                    <div><strong>La couronne d’épines</strong>
+                        <p>Marc 15:17 ↔ Jean 19:2</p><span>Les deux versets évoquent la pourpre et la couronne tressée,
+                            avec un ordre de formulation différent.</span>
+                    </div>
+                    <div><strong>L’arrivée au Golgotha</strong>
+                        <p>Marc 15:22 ↔ Jean 19:17</p><span>Le lieu et son nom rapprochent les passages ; Jean précise
+                            que Jésus porte sa croix.</span>
+                    </div>
+                    <div><strong>La crucifixion</strong>
+                        <p>Marc 15:27 ↔ Jean 19:18</p><span>Deux autres hommes sont crucifiés avec Jésus, placés de part
+                            et d’autre.</span>
+                    </div>
+                </div>
+                <p>Le contraste avec Jean n’est donc pas uniforme : vers la fin, des correspondances se regroupent
+                    autour de scènes communes de la Passion. Le procès, les moqueries et la crucifixion font se
+                    retrouver des personnages, des lieux et des actions similaires. Les exemples ci-dessus donnent un
+                    sens concret à ce rapprochement visuel : malgré des parcours narratifs différents, les récits se
+                    rejoignent sur ces épisodes. Cela ne signifie pas qu’ils les racontent de façon identique dans tous
+                    leurs détails, ni que tous les points du regroupement représentent la même scène.</p>
+            </section>
+            <section>
+                <h2>Suivre les liens avec les arcs</h2>
+                <p>Une autre représentation place les versets de Matthieu, puis ceux de Luc, sur un même axe. Chaque arc
+                    relie une paire ; sa hauteur correspond au score de similarité.</p>
+                <figure><a href="img/arcs_Matthieu_Luc.png" target="_blank" rel="noopener"
+                        aria-label="Agrandir les arcs entre Matthieu et Luc"><img src="img/arcs_Matthieu_Luc.png"
+                            alt="665 arcs relient des versets de Matthieu et Luc dont la similarité est supérieure ou égale à 0,9."
+                            loading="lazy"></a>
+                    <figcaption>665 paires avec un score d’au moins 0,90. Les couleurs distinguent les arcs ; elles ne
+                        représentent pas des thèmes.</figcaption>
+                </figure>
+                <p>Cette vue permet de suivre les liens entre les deux textes. Avec beaucoup de correspondances, les
+                    arcs se superposent : l’explorateur permet de relever le seuil ou de choisir un chapitre et un
+                    verset pour regarder un ensemble plus réduit.</p>
+                <p>On peut aussi chercher des correspondances <strong>à l’intérieur d’un même livre</strong>. Par
+                    exemple, sélectionnons <strong>Jean 10:30</strong> à gauche — « Moi et le Père nous sommes un. » —
+                    et Jean à droite, en conservant tous les chapitres et versets. Avec un seuil de 0,825, l’explorateur
+                    affiche ici 11 paires, dont le verset comparé à lui-même.</p>
+                <figure><a href="img/jean_10_30_sim_in_jean.png" target="_blank" rel="noopener"
+                        aria-label="Agrandir les correspondances de Jean 10:30 dans Jean"><img
+                            src="img/jean_10_30_sim_in_jean.png"
+                            alt="Recherche de Jean 10:30 dans le même Évangile au seuil de 0,825 : 11 paires, avec Jean 14:7 sélectionné et un score de 0,842."
+                            loading="lazy"></a>
+                    <figcaption>Jean 10:30 comparé aux versets de Jean. La paire sélectionnée rapproche Jean 10:30 et
+                        Jean 14:7, avec une similarité de 0,842.</figcaption>
+                </figure>
+                <p>Parmi les résultats, <strong>Jean 14:7</strong> dit : « Si vous me connaissiez, vous connaîtriez
+                    aussi mon Père. Et dès maintenant vous le connaissez, et vous l’avez vu. » Le rapprochement porte
+                    ici sur la relation entre Jésus et le Père, exprimée de deux façons différentes : l’unité dans Jean
+                    10:30, et la connaissance du Père à travers Jésus dans Jean 14:7. L’outil permet ainsi de suivre un
+                    thème au sein du livre, au-delà des seuls récits parallèles.</p>
+            </section>
+
+            <div class="article-end">
+                <h2>À vous de suivre les correspondances</h2>
+                <p>Choisissez deux livres, ajustez le seuil et ouvrez une paire pour lire les deux versets.</p><a
+                    class="article-cta" href="./">Explorer les correspondances →</a>
+            </div>
+        </article>
+        <footer>
+            <div><strong>À propos de cette exploration</strong>
+                <p>3 779 versets · Louis Segond 1910 · Chaque verset est encodé avec
+                    <strong><code>mistral-embed</code></strong>, avec un traitement en batch. Les similarités cosinus
+                    sont précalculées : elles indiquent une proximité de sens, sans garantir un même événement.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

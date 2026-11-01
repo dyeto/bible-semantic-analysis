@@ -1,0 +1,102 @@
+[
+  {
+    "custom_id": "40:1:1",
+    "book_name": "Matthieu",
+    "book": 40,
+    "chapter": 1,
+    "verse": 1,
+    "text": "¶ Généalogie de Jésus-Christ, fils de David, fils d'Abraham.",
+    "embedding_text": "Généalogie de Jésus-Christ, fils de David, fils d'Abraham.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "40:13:25",
+    "book_name": "Matthieu",
+    "book": 40,
+    "chapter": 13,
+    "verse": 25,
+    "text": "Mais, pendant que les gens dormaient, son ennemi vint, sema de l'ivraie parmi le blé, et s'en alla.",
+    "embedding_text": "Mais, pendant que les gens dormaient, son ennemi vint, sema de l'ivraie parmi le blé, et s'en alla.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "40:24:27",
+    "book_name": "Matthieu",
+    "book": 40,
+    "chapter": 24,
+    "verse": 27,
+    "text": "Car, comme l'éclair part de l'orient et se montre jusqu'en occident, ainsi sera l'avènement du Fils de l'homme.",
+    "embedding_text": "Car, comme l'éclair part de l'orient et se montre jusqu'en occident, ainsi sera l'avènement du Fils de l'homme.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "41:5:40",
+    "book_name": "Marc",
+    "book": 41,
+    "chapter": 5,
+    "verse": 40,
+    "text": "Et ils se moquaient de lui. Alors, ayant fait sortir tout le monde, il prit avec lui le père et la mère de l'enfant, et ceux qui l'avaient accompagné, et il entra là où était l'enfant.",
+    "embedding_text": "Et ils se moquaient de lui. Alors, ayant fait sortir tout le monde, il prit avec lui le père et la mère de l'enfant, et ceux qui l'avaient accompagné, et il entra là où était l'enfant.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "41:14:70",
+    "book_name": "Marc",
+    "book": 41,
+    "chapter": 14,
+    "verse": 70,
+    "text": "Et il le nia de nouveau. Peu après, ceux qui étaient présents dirent encore à Pierre: Certainement tu es de ces gens-là, car tu es Galiléen.",
+    "embedding_text": "Et il le nia de nouveau. Peu après, ceux qui étaient présents dirent encore à Pierre: Certainement tu es de ces gens-là, car tu es Galiléen.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "42:7:48",
+    "book_name": "Luc",
+    "book": 42,
+    "chapter": 7,
+    "verse": 48,
+    "text": "Et il dit à la femme: Tes péchés sont pardonnés.",
+    "embedding_text": "Et il dit à la femme: Tes péchés sont pardonnés.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "42:17:12",
+    "book_name": "Luc",
+    "book": 42,
+    "chapter": 17,
+    "verse": 12,
+    "text": "Comme il entrait dans un village, dix lépreux vinrent à sa rencontre. Se tenant à distance,",
+    "embedding_text": "Comme il entrait dans un village, dix lépreux vinrent à sa rencontre. Se tenant à distance,",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "43:1:39",
+    "book_name": "Jean",
+    "book": 43,
+    "chapter": 1,
+    "verse": 39,
+    "text": "Venez, leur dit-il, et voyez. Ils allèrent, et ils virent où il demeurait; et ils restèrent auprès de lui ce jour-là. C'était environ la dixième heure.",
+    "embedding_text": "Venez, leur dit-il, et voyez. Ils allèrent, et ils virent où il demeurait; et ils restèrent auprès de lui ce jour-là. C'était environ la dixième heure.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "43:10:22",
+    "book_name": "Jean",
+    "book": 43,
+    "chapter": 10,
+    "verse": 22,
+    "text": "¶ On célébrait à Jérusalem la fête de la Dédicace. C'était l'hiver.",
+    "embedding_text": "On célébrait à Jérusalem la fête de la Dédicace. C'était l'hiver.",
+    "translation": "Louis Segond 1910"
+  },
+  {
+    "custom_id": "43:21:25",
+    "book_name": "Jean",
+    "book": 43,
+    "chapter": 21,
+    "verse": 25,
+    "text": "Jésus a fait encore beaucoup d'autres choses; si on les écrivait en détail, je ne pense pas que le monde même pût contenir les livres qu'on écrirait.",
+    "embedding_text": "Jésus a fait encore beaucoup d'autres choses; si on les écrivait en détail, je ne pense pas que le monde même pût contenir les livres qu'on écrirait.",
+    "translation": "Louis Segond 1910"
+  }
+]
