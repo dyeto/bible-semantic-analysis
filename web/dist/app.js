@@ -192,6 +192,6 @@ new ResizeObserver(resize).observe(canvas);
 async function init(){
  const response=await fetch('data/manifest.json');if(!response.ok)throw new Error('Corpus manquant : lancer prepare_data.py, puis ouvrir le site via le serveur local.');manifest=await response.json();
  for(const id of ['bookA','bookB']){manifest.books.forEach((b,i)=>{const option=document.createElement('option');option.value=i;option.textContent=b.name;$(id).append(option);});$(id).disabled=false;}
- $('bookA').value=state.a;$('bookB').value=state.b;updateChapters('a');updateChapters('b');$('threshold').min=manifest.minScore;$('threshold').disabled=false;setMode(state.mode);await loadPair();
+ $('bookA').value=state.a;$('bookB').value=state.b;updateChapters('a');updateChapters('b');$('chapterA').value='8';updateVerses('a');$('threshold').min=manifest.minScore;$('threshold').disabled=false;setMode(state.mode);await loadPair();
 }
 init().catch(fail);
